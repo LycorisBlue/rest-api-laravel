@@ -201,70 +201,22 @@ return new class extends Migration
 
 ```
 
-### Customer
+## La différence principale entre use et namespace en Laravel est 
 
-Le modèle `Customer` représente un client dans le système. Il peut être de type individuel (I) ou professionnel (B). Il a des attributs tels que le nom, l'email, l'adresse, la ville, l'État, et le code postal.
+### namespace
 
-```php
-class Customer extends Model
-{
-    use HasFactory;
+namespace permet de définir l'espace de noms (namespace) d'une classe PHP. Toutes les classes Laravel sont organisées dans des namespaces comme App, Database, Auth etc.
 
-    public function invoices(){
-        return $this->hasMany(Invoice::class);
-    }
-}
-```
+### use
 
-## Factories
-
-### InvoiceFactory
-
-La factory `InvoiceFactory` est utilisée pour générer des données de test pour le modèle `Invoice`. Elle utilise le Faker intégré à Laravel pour créer des valeurs réalistes pour les attributs.
+use permet d'importer une classe PHP pour pouvoir l'utiliser sans préfixer son namespace complet.
 
 ```php
-class InvoiceFactory extends Factory
-{
-    // ... (voir le code complet dans le message précédent)
-}
+namespace App\Http\Controllers\Api\v1;
+
+use App\Http\Requests\StoreCustomerRequest;
+use App\Http\Requests\UpdateCustomerRequest;
+use App\Models\Customer;
+use App\Http\Controllers\Controller;
+
 ```
-
-### CustomerFactory
-
-La factory `CustomerFactory` est utilisée pour générer des données de test pour le modèle `Customer`. Elle utilise le Faker intégré à Laravel pour créer des valeurs réalistes en fonction du type de client (individuel ou professionnel).
-
-```php
-class CustomerFactory extends Factory
-{
-    // ... (voir le code complet dans le message précédent)
-}
-```
-
-## Seeders
-
-### CustomerSeeder
-
-Le seeder `CustomerSeeder` peuple la base de données avec des clients et leurs factures associées en utilisant les factories. Il simule différents scénarios en générant des quantités variables de clients et de factures pour chaque client.
-
-```php
-class CustomerSeeder extends Seeder
-{
-    // ... (voir le code complet dans le message précédent)
-}
-```
-
-## DatabaseSeeder
-
-La classe `DatabaseSeeder` est le point d'entrée principal pour exécuter les seeders. Dans cet exemple, elle appelle uniquement le seeder `CustomerSeeder`, mais dans un projet plus complexe, elle pourrait appeler plusieurs seeders pour générer différentes parties de la base de données.
-
-```php
-class DatabaseSeeder extends Seeder
-{
-    public function run(): void
-    {
-        $this->call(CustomerSeeder::class);
-    }
-}
-```
-
-N'oubliez pas d'adapter ce README en fonction des détails spécifiques de votre projet et d'ajouter d'autres sections au besoin.
