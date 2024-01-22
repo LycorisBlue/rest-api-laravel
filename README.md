@@ -49,7 +49,7 @@ Nous tenons à remercier les sponsors suivants qui financent le développement d
 - **[byte5](https://byte5.de)**
 - **[OP.GG](https://op.gg)**
 
-## Contributing
+## Contribution
 
 Merci d'envisager de contribuer au framework Laravel ! Le guide de contribution se trouve dans la section [Documentation de laravel](https://laravel.com/docs/contributions).
 
