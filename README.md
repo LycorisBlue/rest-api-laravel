@@ -65,29 +65,12 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-Bien sûr, voici un exemple de contenu pour un fichier `README.md` qui explique les différentes parties de votre application basée sur Laravel, en utilisant les explications que j'ai fournies précédemment :
 
-```markdown
-# Laravel Invoice System
+# php artisan make:model nom_du_model --all
 
-Ce projet est une application basée sur Laravel qui gère les clients et leurs factures associées.
-
-## Modèles
-
-### Invoice
-
-Le modèle `Invoice` représente une facture dans le système. Il est associé à un client et peut avoir différents états tels que "Billed" (B), "Paid" (P), ou "Void" (V). La date de facturation (`billed_date`) et, le cas échéant, la date de paiement (`paid_date`) sont également enregistrées.
-
-```php
-class Invoice extends Model
-{
-    use HasFactory;
-
-    public function customer(){
-        return $this->belongsTo(Customer::class);
-    }
-}
-```
+- Elle crée un nouveau modèle Eloquent avec le nom nom_du_model
+- L'option --all indique de également générer un controller, Seeder, migration, factory, policy une fabrique et une ressource pour ce model.
+![Texte alternatif](./others/img1.png)
 
 ### Customer
 
