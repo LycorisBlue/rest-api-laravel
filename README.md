@@ -157,6 +157,49 @@ class CustomerSeeder extends Seeder
 }
 
 ```
+## Migrations
+
+Les migrations dans Laravel jouent un rôle très important dans la gestion du schéma de la base de données d'une application.
+
+- Créer/modifier les tables de la base de données durant le développement, de manière simple et structurée. Les migrations permettent d'ajouter/supprimer des colonnes, indexes, clés étrangères, etc.
+- Offrir une alternative simple et fiable aux changements de schéma manuels risqués.
+- Versionner les changements de schéma en base au fil du temps et pouvoir appliquer ou annuler ces changements si besoin.
+
+```php
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('invoices', function (Blueprint $table) {
+            $table->id();
+            $table->integer('customer_id');
+            $table->integer('amount');
+            $table->string('status'); //billed; paid, Void
+            $table->dateTime('billed_date');
+            $table->dateTime('paid_date')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('invoices');
+    }
+};
+
+```
 
 ### Customer
 
