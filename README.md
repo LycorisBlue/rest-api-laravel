@@ -7,33 +7,33 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## à propos de Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Laravel est un framework d'application web avec une syntaxe expressive et élégante. Nous pensons que le développement doit être une expérience agréable et créative pour être vraiment satisfaisant. Laravel soulage le développement en facilitant les tâches courantes utilisées dans de nombreux projets web, telles que :
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [Moteur de routage simple et rapide](https://laravel.com/docs/routing).
+- [Puissant conteneur d'injection de dépendances](https://laravel.com/docs/container).
+- Conteneur puissant d'injection de dépendancesMultiples back-ends pour la [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressif, intuitif [database ORM](https://laravel.com/docs/eloquent).
+- agnostique en matière de base de données [schema migrations](https://laravel.com/docs/migrations).
+- [Traitement robuste des tâches en arrière-plan](https://laravel.com/docs/queues).
+- [Diffusion d'événements en temps réel](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Laravel est accessible, puissant et fournit les outils nécessaires à la réalisation d'applications robustes et de grande envergure.
 
-## Learning Laravel
+## Apprendre Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Laravel est le système le plus complet et le plus approfondi [documentation](https://laravel.com/docs) et une bibliothèque de tutoriels vidéo de tous les frameworks d'applications web modernes, ce qui facilite la prise en main du framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Vous pouvez également essayer le [Laravel Bootcamp](https://bootcamp.laravel.com), où vous serez guidé dans la construction d'une application Laravel moderne à partir de zéro.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Si vous n'avez pas envie de lire, [Laracasts](https://laracasts.com) peut vous aider. Laracasts contient plus de 2000 tutoriels vidéo sur un large éventail de sujets, y compris Laravel, PHP moderne, tests unitaires et JavaScript. Améliorez vos compétences en piochant dans notre bibliothèque vidéo complète.
 
 ## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Nous tenons à remercier les sponsors suivants qui financent le développement de Laravel. Si vous souhaitez devenir un sponsor, veuillez visiter le. [Programme des partenaires Laravel](https://partners.laravel.com).
 
-### Premium Partners
+### Partenaires Premium
 
 - **[Vehikl](https://vehikl.com/)**
 - **[Tighten Co.](https://tighten.co)**
@@ -51,19 +51,19 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Merci d'envisager de contribuer au framework Laravel ! Le guide de contribution se trouve dans la section [Documentation de laravel](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+## Code de conduite
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Afin de s'assurer que la communauté Laravel est accueillante pour tous, nous vous demandons de bien vouloir prendre connaissance et de respecter les règles suivantes [Code de conduite](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+## Vulnérabilités en matière de sécurité
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Si vous découvrez une faille de sécurité dans Laravel, veuillez envoyer un courriel à Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). Toutes les failles de sécurité seront rapidement corrigées.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Le framework Laravel est un logiciel open-source sous licence de la [MIT license](https://opensource.org/licenses/MIT).
 
 
 ## php artisan make:model nom_du_model --all
