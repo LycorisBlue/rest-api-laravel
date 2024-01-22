@@ -118,6 +118,46 @@ class CustomerFactory extends Factory
 
 ```
 
+## Seeders
+
+Les seeders dans Laravel servent à peupler la base de données avec des données initiales ou de référence.
+
+- Insérer des données de référence nécessaires au fonctionnement de l'application, comme des utilisateurs système, des rôles, des paramètres... Ces données doivent être disponibles quelle que soit la situation de la base.
+- Fournir un jeu de données réaliste mais cohérent pour les développeurs, pour simuler un état de la base correspondant au lancement d'un site. Par exemple créer quelques catégories et articles factices.
+- Générer un volume important de données réalistes pour des tests de performance ou de charge.
+
+Bien qu'ils puissent avoir des usages communs, les seeders sont complémentaires des factories :
+
+- Les factories génèrent des données aléatoires, les seeders insèrent des données définies.
+- Les factories sont plus adaptées pour les tests, les seeders pour fournir un état initial fiable de la base.
+- On peut combiner factories et seeders pour générer des volumes importants de données cohérentes.
+
+```php
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Customer;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class CustomerSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        Customer::factory()->count(20)->hasInvoices(5)->create();
+        Customer::factory()->count(15)->hasInvoices(10)->create();
+        Customer::factory()->count(10)->hasInvoices(15)->create();
+        Customer::factory()->count(5)->hasInvoices(20)->create();
+        Customer::factory()->count(7)->create();
+    }
+}
+
+```
+
 ### Customer
 
 Le modèle `Customer` représente un client dans le système. Il peut être de type individuel (I) ou professionnel (B). Il a des attributs tels que le nom, l'email, l'adresse, la ville, l'État, et le code postal.
