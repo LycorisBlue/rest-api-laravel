@@ -73,6 +73,51 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ![Texte alternatif](./others/img1.png)
 
+## Factory
+
+Les factories dans Laravel jouent un rôle important pour générer des données de test pour les modèles
+
+- Générer facilement des enregistrements factices en base de données pour les tests. Au lieu d'insérer manuellement des données
+- Tester le modèle avec des données aléatoires à chaque exécution des tests. La factory permet de ne pas réutiliser les mêmes données statiques.
+
+```php
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Customer>
+ */
+class CustomerFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        $type = $this->faker->randomElement(['I', 'B']);
+        $name = $type == 'I' ? $this->faker->name() : $this->faker->company();
+
+
+        return [
+            'name'=> $name,
+            'type'=> $type,
+            'email'=> $this->faker->email(),
+            'address'=> $this->faker->streetAddress(),
+            'city'=> $this->faker->city(),
+            'state'=> $this->faker->state(),
+            'postal_code'=> $this->faker->postcode(),
+            //
+        ];
+    }
+}
+
+```
+
 ### Customer
 
 Le modèle `Customer` représente un client dans le système. Il peut être de type individuel (I) ou professionnel (B). Il a des attributs tels que le nom, l'email, l'adresse, la ville, l'État, et le code postal.
